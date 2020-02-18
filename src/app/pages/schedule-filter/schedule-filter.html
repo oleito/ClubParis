@@ -1,16 +1,16 @@
 <ion-header translucent>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-button *ngIf="ios" (click)="dismiss()">Cancel</ion-button>
+      <ion-button *ngIf="ios" (click)="dismiss()">Cancelar</ion-button>
       <ion-button *ngIf="!ios" (click)="selectAll(false)">Reset</ion-button>
     </ion-buttons>
 
     <ion-title>
-      Filter Sessions
+      Filtrar comercios
     </ion-title>
 
     <ion-buttons slot="end">
-      <ion-button (click)="applyFilters()" strong>Done</ion-button>
+      <ion-button (click)="applyFilters()" strong>Listo!</ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -33,10 +33,10 @@
 <ion-footer translucent *ngIf="ios">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-button (click)="selectAll(false)">Deselect All</ion-button>
+      <ion-button (click)="selectAll(false)">Ninguno</ion-button>
     </ion-buttons>
     <ion-buttons slot="end">
-      <ion-button (click)="selectAll(true)">Select All</ion-button>
+      <ion-button (click)="selectAll(true)">Todos</ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-footer>

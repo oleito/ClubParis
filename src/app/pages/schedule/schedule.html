@@ -17,11 +17,11 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
 
-    <ion-title>Sessions</ion-title>
+    <ion-title>Comercios</ion-title>
 
     <ion-buttons slot="end">
       <ion-button (click)="presentFilter()">
-        <span *ngIf="ios">Filter</span>
+        <span *ngIf="ios">Filtrar</span>
         <span *ngIf="!ios">
           <ion-icon slot="icon-only" name="options"></ion-icon>
         </span>
@@ -55,7 +55,7 @@
         </ion-item>
         <ion-item-options>
           <ion-item-option color="favorite" (click)="addFavorite(slidingItem, session)" *ngIf="segment === 'all'">
-            Favorite
+            Favorito
           </ion-item-option>
           <ion-item-option color="danger" (click)="removeFavorite(slidingItem, session, 'Remove Favorite')"
             *ngIf="segment === 'favorites'">
@@ -67,7 +67,7 @@
   </ion-list>
 
   <ion-list-header [hidden]="shownSessions > 0">
-    No Sessions Found
+    No hay resultados
   </ion-list-header>
 
   <ion-fab slot="fixed" vertical="bottom" horizontal="end" #fab>

@@ -28,34 +28,6 @@ export class AccountPage implements AfterViewInit {
     console.log('Clicked to update picture');
   }
 
-  // Present an alert with the current username populated
-  // clicking OK will update the username and display it
-  // clicking Cancel will close the alert and do nothing
-  async changeUsername() {
-    const alert = await this.alertCtrl.create({
-      header: 'Change Username',
-      buttons: [
-        'Cancel',
-        {
-          text: 'Ok',
-          handler: (data: any) => {
-            this.userData.setUsername(data.username);
-            this.getUsername();
-          }
-        }
-      ],
-      inputs: [
-        {
-          type: 'text',
-          name: 'username',
-          value: this.username,
-          placeholder: 'username'
-        }
-      ]
-    });
-    await alert.present();
-  }
-
   getUsername() {
     this.userData.getUsername().then((username) => {
       this.username = username;
