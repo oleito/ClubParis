@@ -13,6 +13,7 @@ export class SessionDetailPage {
   session: any;
   isFavorite = false;
   defaultHref = '';
+  sessionId = 1;
 
   constructor(
     private dataProvider: ConferenceData,

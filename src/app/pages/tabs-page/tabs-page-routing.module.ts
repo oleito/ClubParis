@@ -19,6 +19,10 @@ const routes: Routes = [
           {
             path: 'session/:sessionId',
             loadChildren: () => import('../session-detail/session-detail.module').then(m => m.SessionDetailModule)
+          },
+          {
+            path: 'session/:sessionId/map',
+            loadChildren: () => import('../session-map/session-map.module').then(m => m.SessionMapModule)
           }
         ]
       },
@@ -59,7 +63,7 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: '/app/tabs/schedule',
+        redirectTo: '/app/tabs',
         pathMatch: 'full'
       }
     ]

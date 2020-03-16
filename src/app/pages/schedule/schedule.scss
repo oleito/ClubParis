@@ -12,8 +12,55 @@ $categories: (
 );
 
 @each $track, $value in map-remove($categories) {
-  ion-item-sliding[track='#{$track}'] ion-label {
+  ion-item-sliding[track="#{$track}"] ion-label {
     border-left: 2px solid $value;
     padding-left: 10px;
   }
+}
+.scroll {
+  background: #ededed;
+}
+
+.speaker-card {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 1.2em;
+  margin-right: 1.2em;
+  margin-top: 0.7em;
+  margin-bottom: 0.7em;
+}
+
+.speaker-card ion-card-header {
+  padding: 0;
+}
+
+.speaker-card ion-card-header .item {
+  padding: 4px 16px;
+}
+
+.speaker-card ion-card-content {
+  padding: 0 !important;
+  font-size: 1.1em;
+}
+
+.speaker-card p {
+  font-size: 1.2em;
+  margin: none;
+}
+.speaker-card .stars {
+  color: #f8cc14;
+  font-size: 1.3em;
+}
+.speaker-card .title {
+  margin-left: 0.2em;
+}
+
+ion-card-header img {
+  position: relative;
+}
+ion-card-header img::before {
+  position: absolute;
+}
+ion-card-header p {
 }
